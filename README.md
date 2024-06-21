@@ -23,6 +23,7 @@ InfoAC
 |-- concatenator.py                                      # Some settings of dataloader.
 |-- Evaluation.py                                        # File containing code for evaluation.
 |-- main.py                                              # File containing code for fine-tuning with InfoAC.
+|-- LLama.py                                             # File containing the implementation code for LLama.
 |-- requirements.txt                                     # Python environment file.
 |-- sampler.py                                           # Data sampler.
 |-- trainingconfig.py                                    # Configs of training.
