@@ -19,9 +19,17 @@ InfoAC
     |   |-- SST5-LLama-Pool100-Len10-Gold.pickle         # Reference set for the reference model.
 |-- savedmodel                                           # Saved checkpoints after fine-tuning with InfoAC.
     |   |-- SST-5                                        # Saved checkpoints for the SST-5 benchmark.
-        |-- SST5_1000_LLama-7B_Lora8_InfoAC              # Checkpoints for the LLama-7B.                                     
+        |-- SST5_1000_LLama-7B_Lora8_InfoAC              # Checkpoints for the LLama-7B.
+|-- concatenator.py                                      # Some settings of dataloader.
+|-- Evaluation.py                                        # File containing code for evaluation.
+|-- main.py                                              # File containing code for fine-tuning with InfoAC.
+|-- requirements.txt                                     # Python environment file.
+|-- sampler.py                                           # Data sampler.
+|-- trainingconfig.py                                    # Configs of training.
 
+The processed data files for both the Vicuna and LLama models, pertaining to the SST-5 benchmark, are located in the "Mydataset" folder.
 
+The checkpoints of four LLMs after fine-tuning with InfoAC are located in the "savedmodel" folder.
 ```
 
 ## Evaluation
@@ -29,14 +37,14 @@ The experiments utilize four large language models (LLMs): LLama2-7B-chat, LLama
 ```
 **Original LLM**
 python Evaluation.py  --quantization --Model "LLama-7B" --Dataset "SST5"
+
 Model = ['LLama-7B', 'LLama-13B', 'Vicuna-7B', 'Vicuna-13B']
 Dataset = ['SST5', 'SST2', 'Next', 'Round', 'QQP']
 
 LLM after Fine-tuning with InfoAC:
 python Evaluation.py --quantization  --load_path='savedmodel/SST-5/SST5_1000_LLama-7B_Lora8_InfoAC' --Model "LLama-7B" --Dataset "SST5"
 
-
-
+load_path: The path of the corresponding checkpoint.
 
 ```
 
