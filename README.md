@@ -27,10 +27,11 @@ InfoAC
 |-- sampler.py                                           # Data sampler.
 |-- trainingconfig.py                                    # Configs of training.
 
+
+```
 The processed data files for both the Vicuna and LLama models, pertaining to the SST-5 benchmark, are located in the "Mydataset" folder.
 
 The checkpoints of four LLMs after fine-tuning with InfoAC are located in the "savedmodel" folder.
-```
 
 ## Evaluation
 The experiments utilize four large language models (LLMs): LLama2-7B-chat, LLama2-13B-chat, Vicuna-7B-v1.5, and Vicuna-13B-v1.5.
@@ -52,9 +53,9 @@ The experiments utilize four large language models (LLMs): LLama2-7B-chat, LLama
 
 ## Fine-tuning with InfoAC
 
-python main.py --use_peft --quantization --NumTrain 1000 --Model='LLama-7B' --Dataset='SST5'
-
-NumTrain: The number of training batches.
+    python main.py --use_peft --quantization --NumTrain 1000 --Model='LLama-7B' --Dataset='SST5'
+    
+    NumTrain: The number of training batches.
 
 **Note:** The batch size is set to 8 and cannot be changed during training with our provided processed data. If you need to adjust the batch size, it will be necessary to reconstruct the training data.
 
