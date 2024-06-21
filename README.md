@@ -50,7 +50,7 @@ load_path: The path of the corresponding checkpoint.
 
 ```
 
-## fine-tuning with InfoAC
+## Fine-tuning with InfoAC
 ```
 python main.py --use_peft --quantization --NumTrain 1000 --Model='LLama-7B' --Dataset='SST5'
 
