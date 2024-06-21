@@ -29,9 +29,9 @@ InfoAC
 
 
 ```
-The processed data files for both the Vicuna and LLama models, pertaining to the SST-5 benchmark, are located in the "Mydataset" folder.
+The processed data files for both the Vicuna and LLama models, pertaining to the SST-5 benchmark, are located in the "Mydataset" folder. Here is the link to download it: [link](https://drive.google.com/file/d/1e3flOwdvnobab1ckKd3SNn9Ic3x4gCpq/view?usp=sharing).
 
-The checkpoints of four LLMs after fine-tuning with InfoAC are located in the "savedmodel" folder.
+The checkpoints of four LLMs after fine-tuning with InfoAC are located in the "savedmodel" folder. Here is the link to download it: [link](https://drive.google.com/file/d/1HWaKJnUhEQGJ_2KwMNguxd0C1NIWaHd1/view?usp=sharing).
 
 ## Evaluation
 The experiments utilize four large language models (LLMs): LLama2-7B-chat, LLama2-13B-chat, Vicuna-7B-v1.5, and Vicuna-13B-v1.5.
