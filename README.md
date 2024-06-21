@@ -34,28 +34,31 @@ The checkpoints of four LLMs after fine-tuning with InfoAC are located in the "s
 
 ## Evaluation
 The experiments utilize four large language models (LLMs): LLama2-7B-chat, LLama2-13B-chat, Vicuna-7B-v1.5, and Vicuna-13B-v1.5.
-```
-1. Original LLMs:
 
-python Evaluation.py  --quantization --Model "LLama-7B" --Dataset "SST5"
+**1. Original LLMs**
 
-Model = ['LLama-7B', 'LLama-13B', 'Vicuna-7B', 'Vicuna-13B']
-Dataset = ['SST5', 'SST2', 'Next', 'Round', 'QQP']
+    python Evaluation.py  --quantization --Model "LLama-7B" --Dataset "SST5"
 
-2. LLMs after Fine-tuning with InfoAC:
+    Model = ['LLama-7B', 'LLama-13B', 'Vicuna-7B', 'Vicuna-13B']
 
-python Evaluation.py --quantization  --load_path='savedmodel/SST-5/SST5_1000_LLama-7B_Lora8_InfoAC' --Model "LLama-7B" --Dataset "SST5"
+    Dataset = ['SST5', 'SST2', 'Next', 'Round', 'QQP']
 
-load_path: The path of the corresponding checkpoint.
+**2. LLMs after Fine-tuning with InfoAC**
 
-```
+    python Evaluation.py --quantization  --load_path='savedmodel/SST-5/SST5_1000_LLama-7B_Lora8_InfoAC' --Model "LLama-7B" --Dataset "SST5"
+
+    load_path: The path of the corresponding checkpoint.
+
 
 ## Fine-tuning with InfoAC
-```
+
 python main.py --use_peft --quantization --NumTrain 1000 --Model='LLama-7B' --Dataset='SST5'
 
-NumTrain: The number of training batches. 
-```
+NumTrain: The number of training batches.
+
+**Note:** The batch size is set to 8 and cannot be changed during training with our provided processed data. If you need to adjust the batch size, it will be necessary to reconstruct the training data.
+
+
 
 ## Reference
 ```
