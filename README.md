@@ -1,4 +1,4 @@
 # InfoAC
-Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models
+Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models.
 
-The paper has been accepted by Findings of ACL 24. The code will come soon.
+Code release for [Addressing Order Sensitivity of In-Context Demonstration Examples in Causal Language Models] (https://arxiv.org/abs/2402.15637.pdf).
