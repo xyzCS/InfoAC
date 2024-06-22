@@ -19,7 +19,7 @@ InfoAC
     |   |-- SST5-LLama-Pool100-Len10-Gold.pickle         # Reference set for the reference model.
 |-- savedmodel                                           # Saved checkpoints after fine-tuning with InfoAC.
     |   |-- SST-5                                        # Saved checkpoints for the SST-5 benchmark.
-        |-- SST5_1000_LLama-7B_Lora8_InfoAC              # Checkpoints for the LLama-7B.
+        |   |-- SST5_1000_LLama-7B_Lora8_InfoAC          # Checkpoints for the LLama-7B.
 |-- concatenator.py                                      # Some settings of dataloader.
 |-- Evaluation.py                                        # File containing code for evaluation.
 |-- main.py                                              # File containing code for fine-tuning with InfoAC.
